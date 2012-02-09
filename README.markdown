@@ -1,7 +1,5 @@
 ###http://toobsteak.heroku.com/
 
-# test? delete this comment
-
 #####Commit notes: (Apr 16 2:30a.m. - Mike Romain)
 ######Figured out Delayed_Job Gem
 + So Delayed_Job is a gem that allows us to run a process in the
