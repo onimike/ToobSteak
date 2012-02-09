@@ -8,4 +8,13 @@
     <td>
     </td>
   </tr>
+  <tr>
+    <% unless @user.microposts.empty? %>
+      <table>
+	    My Comments:
+        <%= render @microposts %>
+      </table>
+      <%= will_paginate @microposts %>
+    <% end %>
+  </tr>
 </table>

@@ -2,6 +2,7 @@ class Micropost < ActiveRecord::Base
   attr_accessible :content, :user_id
 
   belongs_to :show
+  belongs_to :user
 
   validates :content, :presence => true, :length => { :maximum => 140 }
   validates :show_id, :presence => true
