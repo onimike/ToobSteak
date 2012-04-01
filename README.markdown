@@ -1,6 +1,6 @@
 #### Changelog 
 ##### March 31 - Mike Romain 
-+ Basically copied the sample app. I figured it would be easier to modify it than to create it all again from scratch. 
++ Basically copied the sample app (up to the end of chapter 9). I figured it would be easier to modify it than to create it all again from scratch. 
 
 
 #### CPSC473 Spring 2012
