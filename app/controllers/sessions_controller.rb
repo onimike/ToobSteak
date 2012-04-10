@@ -19,11 +19,7 @@ class SessionsController < ApplicationController
     else
       # Sign the user in and redirect to the user's show page.
       # Remember Me is checked - permanent sign in else log out when browseris closed
-      @last_login = user.currentlogin
-      user.update_attributes(:password => params[:session][:password], 
-                              :lastlogin => @last_login)
-      user.update_attributes(:password => params[:session][:password], 
-                              :currentlogin => 0.years.from_now)                             
+                           
                               
       if(remember == "True")
         sign_in user
