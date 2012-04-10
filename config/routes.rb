@@ -1,4 +1,8 @@
 ToobSteak::Application.routes.draw do
+  get "shows/new"
+
+  get "users/new"
+
   get "static_pages/about"
 
   # The priority is based upon order of creation:
