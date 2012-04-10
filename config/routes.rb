@@ -1,4 +1,6 @@
 ToobSteak::Application.routes.draw do
+  get "sessions/new"
+
   get "users/create"
 
   get "users/edit"
