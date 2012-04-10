@@ -1,4 +1,6 @@
 ToobSteak::Application.routes.draw do
+  get "users/show"
+
   get "shows/new"
 
   get "users/new"
