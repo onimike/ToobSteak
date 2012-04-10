@@ -3,6 +3,9 @@ class CreateShows < ActiveRecord::Migration
     create_table :shows do |t|
       t.string :name
       t.string :description
+	  t.string :network
+	  t.integer :comments
+	  t.integer :followers
 
       t.timestamps
     end

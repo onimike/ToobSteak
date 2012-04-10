@@ -1,2 +1,6 @@
-<h1>Shows#new</h1>
-<p>Find me in app/views/shows/new.html.erb</p>
+<h1>Request a Show</h1>
+	<%= form_tag("/newshow", :method => "post") do %>
+		<%= label_tag(:name, "Enter the name of the show you want to add to ToobSteak: ") %><br />
+		<%= text_field_tag(:name) %><br />
+		<%= submit_tag("Submit") %>
+	<% end %>

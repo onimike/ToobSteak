@@ -10,12 +10,18 @@ ToobSteak::Application.routes.draw do
   get "users/destroy"
 
   get "users/show"
-
   get "shows/new"
-
   get "users/new"
-
   get "static_pages/about"
+<<<<<<< HEAD
+  
+  resources :users, :shows
+  
+  match '/newshow', :to => 'shows#new'
+  
+  root :to => 'pages#home'
+  
+=======
 
   #named routes
   match '/about',	:to => 'static_pages#about'
@@ -78,4 +84,5 @@ ToobSteak::Application.routes.draw do
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id(.:format)))'
+>>>>>>> 6b611d843530e7fa87aa990bbf0b38717c6d3965
 end
