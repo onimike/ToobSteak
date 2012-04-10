@@ -1,12 +1,12 @@
 class ShowsController < ApplicationController
-
+	
+	def show
+		@newshow = Shows.find(params[:id])
+	end
+	
 	def new
+		@newshow = Shows.new
 		@title = "New show"
-		@show = Shows.new
 	end
-	
-	def create
-		@show = params[:name]
-	end
-	
+
 end
