@@ -15,6 +15,10 @@ ToobSteak::Application.routes.draw do
 
   get "static_pages/about"
 
+  #named routes
+  match '/signup',  :to => 'users#new'
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
