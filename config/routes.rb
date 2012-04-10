@@ -18,6 +18,7 @@ ToobSteak::Application.routes.draw do
   get "static_pages/about"
 
   #named routes
+  match '/about',	:to => 'static_pages#about'
   match '/signup',  :to => 'users#new'
 
 
