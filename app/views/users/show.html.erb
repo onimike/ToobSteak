@@ -1,2 +1,13 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<table>
+  <tr>
+    <td>
+      <h1>
+        <%= @user.name %>
+      </h1>
+    </td>
+    <td>
+      <strong>Name</strong> <%= @user.name %><br />
+      <strong>URL</strong>  <%= link_to user_path(@user), @user %><br />
+    </td>
+  </tr>
+</table>
