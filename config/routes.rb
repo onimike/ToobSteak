@@ -1,4 +1,12 @@
 ToobSteak::Application.routes.draw do
+  get "users/create"
+
+  get "users/edit"
+
+  get "users/update"
+
+  get "users/destroy"
+
   get "users/show"
 
   get "shows/new"
