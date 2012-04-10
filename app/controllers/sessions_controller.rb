@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
     user = User.authenticate(params[:session][:email],
                              params[:session][:password])
                              
-    remember = params[:remember]
+    #remember = params[:remember]
                              
     if user.nil?
       flash.now[:error] = "Invalid email/password combination."
@@ -21,11 +21,11 @@ class SessionsController < ApplicationController
       # Remember Me is checked - permanent sign in else log out when browseris closed
                            
                               
-      if(remember == "True")
-        sign_in user
-      else
-        sign_in_temp user
-      end
+      #if(remember == "True")
+      sign_in user
+      #else
+        #sign_in_temp user
+      #end
       redirect_to user
     end
   end
