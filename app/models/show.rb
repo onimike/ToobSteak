@@ -1,4 +1,4 @@
-class Shows < ActiveRecord::Base
+class Show < ActiveRecord::Base
 	attr_accessible :name
 	
 	validates :name,  :presence => true,

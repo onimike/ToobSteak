@@ -1,15 +1,6 @@
 <h1>Request a Show</h1>
-<!--
-	<%= form_tag("/newshow", :method => "post") do %>
-		<%= label_tag(@newshow, "Enter the name of the show you want to add to ToobSteak: ") %><br />
-		<%= text_field_tag(@newshow) %><br />
-		<%= submit_tag("Submit") %>
-	<% end %>
-	
-	<p><%= @newshow %></p> -->
-
-<%= form_for(@newshow) do |f| %>
+<%= form_for(@show) do |f| %>
     <%= f.label :name %><br />
     <%= f.text_field :name %>
-    <%= f.submit "Sign up" %>
+    <%= f.submit "Request" %>
 <% end %>
