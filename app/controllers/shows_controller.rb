@@ -11,12 +11,18 @@ class ShowsController < ApplicationController
 	
 	def create
 		@show = Show.new(params[:show])
-		#check if it's a real show here, before @show.save!
-		if @show.save
+
+		if Show.is_show?(@show.name) && @show.save
 			redirect_to @show
 		else
 			render 'new'
 		end
+		
+#		if @show.save
+#			redirect_to @show
+#		else
+#			render 'new'
+#		end
 	end
 
 end
