@@ -13,6 +13,8 @@ class ShowsController < ApplicationController
 		@show = Show.new(params[:show])
 
 		if Show.is_show?(@show.name) && @show.save
+			#need to change Show.is_show to return the show's id instead of a boolean
+			#because we can't fill the current show's details in the model show.rb
 			redirect_to @show
 		else
 			render 'new'
