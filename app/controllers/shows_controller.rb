@@ -24,8 +24,8 @@ class ShowsController < ApplicationController
 				@show.network = series.network()
 			#	@show.genre = series.genres()[0] #Just gets the first genre of possibly many
 				@show.minutes = series.runtime() #Running time of an episode in minutes
-			#	@show.rating = series.rating()
-			#	@show.banner = @results[res]["banner"] #A link to an image hosten on thetvdb.com
+				@show.rating = series.rating()
+				@show.banner = @results[res]["banner"] #A link to an image hosten on thetvdb.com
 			
 				if @show.save #only saves if there are no duplicates
 					redirect_to @show
