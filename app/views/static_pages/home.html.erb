@@ -1,5 +1,9 @@
-<h1>ToobSteak!</h1>
+<h3>Welcome to ToobSteak!</h3>
 
-<p>
-	This is the home page for ToobSteak!
-</p>
+<% recent = Show.last(10).reverse %> <!-- Displays the 10 most recent shows in descending order, or nothing if there are no shows. -->
+	<p>Recently watched:</p>
+	<% if !recent.nil? %> <!-- If there are shows in the database -->
+		<% recent.each_index do |s| %>
+			<%= link_to recent[s]["name"], "/shows/#{recent[s]["id"]}" %><br \>
+		<% end %>
+	<% end %>

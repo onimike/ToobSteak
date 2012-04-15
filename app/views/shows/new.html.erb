@@ -1,4 +1,6 @@
 <h1>Request a Show</h1>
+<p>Enter the exact name of your show below, including proper spacing and words such as "the", for example:
+You should type "the simpsons" instead of "simpsons". Show names are not case-sensitive.</p>
 <%= form_for(@show) do |f| %>
     <%= f.label :name %><br />
     <%= f.text_field :name %>

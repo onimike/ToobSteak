@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120410194042) do
+ActiveRecord::Schema.define(:version => 20120415043127) do
 
   create_table "shows", :force => true do |t|
     t.string   "name"
@@ -19,6 +19,10 @@ ActiveRecord::Schema.define(:version => 20120410194042) do
     t.string   "network"
     t.integer  "comments"
     t.integer  "followers"
+    t.integer  "minutes"
+    t.decimal  "rating"
+    t.string   "genre"
+    t.string   "banner"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

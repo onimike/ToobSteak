@@ -1,0 +1,9 @@
+<% if !@results[0].nil? %> <!-- If there are actual results based on their show's name -->
+	<p>Your show was not added! Perhaps you meant one of these?<p>
+	<% @results.each_index do |res| %> <!-- Iterate through the entire results array and print out every shows proper name, based on matches -->
+		<%= @results[res]["SeriesName"]  %><br \>
+	<% end %><br \>
+<% else %> <!-- Else there were no matches for their show at all -->
+	<p>Your show was not added: could not find a result
+<% end %>
+<%= link_to "Try again", newshow_path %>
