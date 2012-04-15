@@ -2,7 +2,8 @@
 
 ####Commit notes: (Apr 15 3:20p.m. - Mike Romain)
 #####I had to fix some stuff with the shows to make it work on heroku, so whenever you make database changes, remember to:
-+ heroku rake db:migrate (do this after pushing to heroku)
++ heroku rake db:migrate (do this after pushing to heroku), and if that doesn't fix it, do:
++ heroku rake db:reset
 
 #####Regarding images:
 + I can't get images to display properly. If you go to a shows page from a link, or after creating, you can see a broken image at the bottom,
