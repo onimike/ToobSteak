@@ -23,7 +23,7 @@ class ShowsController < ApplicationController
 				@show.description = series.overview()
 				@show.network = series.network()
 			#	@show.genre = series.genres()[0] #Just gets the first genre of possibly many
-			#	@show.minutes = series.runtime() #Running time of an episode in minutes
+				@show.minutes = series.runtime() #Running time of an episode in minutes
 			#	@show.rating = series.rating()
 			#	@show.banner = @results[res]["banner"] #A link to an image hosten on thetvdb.com
 			
