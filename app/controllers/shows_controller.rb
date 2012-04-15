@@ -17,15 +17,19 @@ class ShowsController < ApplicationController
 		@results = tvdb.search(@show.name)
 		
 		@results.each_index do |res|
-			if @results[res]["SeriesName"].upcase.split == @show.name.upcase.split #This matches the show name exactly
-				series = tvdb.get_series_by_id(@results[res]["seriesid"])
-				@show.name = series.name()
-				@show.description = series.overview()
-				@show.network = series.network()
-				@show.genre = series.genres()[0] #Just gets the first genre of possibly many
-				@show.minutes = series.runtime() #Running time of an episode in minutes
-				@show.rating = series.rating()
-				@show.banner = @results[res]["banner"] #A link to an image hosten on thetvdb.com
+			if @results[res]["SeriesName"].upcase == @show.name.upcase #This matches the show name exactly
+#				series = tvdb.get_series_by_id(@results[res]["seriesid"])
+#				@show.name = series.name()
+#				@show.description = series.overview()
+#				@show.network = series.network()
+#				@show.genre = series.genres()[0] #Just gets the first genre of possibly many
+#				@show.minutes = series.runtime() #Running time of an episode in minutes
+#				@show.rating = series.rating()
+#				@show.banner = @results[res]["banner"] #A link to an image hosten on thetvdb.com
+
+				@show.name = @results[res]["SeriesName"]
+				@show.description = @results[res]["Overview"]
+				@show.banner = @results[res]["banner"]
 			
 				if @show.save #only saves if there are no duplicates
 					redirect_to @show
