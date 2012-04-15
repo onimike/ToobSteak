@@ -2,7 +2,7 @@ class CreateShows < ActiveRecord::Migration
   def self.up
     create_table :shows do |t|
       t.string :name
-      t.string :description
+      t.text :description
 	  t.string :network
 	  t.integer :minutes
 	  t.decimal :rating

@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(:version => 20120415043127) do
 
   create_table "shows", :force => true do |t|
     t.string   "name"
-    t.string   "description"
+    t.text   "description"
     t.string   "network"
     t.integer  "comments"
     t.integer  "followers"
