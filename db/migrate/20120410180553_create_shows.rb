@@ -9,7 +9,7 @@ class CreateShows < ActiveRecord::Migration
 	  t.integer :comments
 	  t.integer :followers
 	  t.string :genre
-	  t.sring :banner
+	  t.string :banner
 
       t.timestamps
     end

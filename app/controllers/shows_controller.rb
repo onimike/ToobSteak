@@ -23,6 +23,8 @@ class ShowsController < ApplicationController
 				@show.description = @results[res]["Overview"]
 				@show.banner = @results[res]["banner"]
 			
+#				@show.delay.fill @results[res]["seriesid"]
+#				populate(@results[res]["seriesid"])
 #				series = tvdb.get_series_by_id(@results[res]["seriesid"])
 #				@show.network = series.network()
 #				@show.genre = series.genres()[0] #Just gets the first genre of possibly many
@@ -31,6 +33,7 @@ class ShowsController < ApplicationController
 #				@show.banner = @results[res]["banner"] #A link to an image hosten on thetvdb.com
 				
 				if @show.save #only saves if there are no duplicates
+					@show.fill @results[res]["seriesid"]
 					redirect_to @show
 					return #This needs to be here to prevent a rails error, so says Rails
 				else
@@ -42,4 +45,15 @@ class ShowsController < ApplicationController
 		render 'error'
 		
 	end
+	
+	def populate(seriesid)
+		tvdb = TvdbParty::Search.new("F6EA8F2FD26C08BF")
+		series = tvdb.get_series_by_id(seriesid)
+		@show.network = series.network()
+		@show.genre = series.genres()[0] #Just gets the first genre of possibly many
+		@show.minutes = series.runtime() #Running time of an episode in minutes
+		@show.rating = series.rating()
+	end
+#	handle_asynchronously :populate
+	
 end
