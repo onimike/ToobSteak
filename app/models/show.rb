@@ -15,6 +15,4 @@ class Show < ActiveRecord::Base
 		update_attribute :minutes, series.runtime() #Running time of an episode in minutes
 		update_attribute :rating, series.rating()
 	end
-	handle_asynchronously :fill
-	
 end

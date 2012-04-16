@@ -8,13 +8,13 @@ class ShowsController < ApplicationController
 	
 	def new
 		@show = Show.new
-		@title = "New show"
 	end
 	
 	def create
 		tvdb = TvdbParty::Search.new("F6EA8F2FD26C08BF")
 		@show = Show.new(params[:show])
 		@results = tvdb.search(@show.name)
+		@seriesid = ""
 		
 		@results.each_index do |res|
 			if @results[res]["SeriesName"].upcase == @show.name.upcase #This matches the show name exactly
@@ -22,18 +22,11 @@ class ShowsController < ApplicationController
 				@show.name = @results[res]["SeriesName"]
 				@show.description = @results[res]["Overview"]
 				@show.banner = @results[res]["banner"]
-			
-#				@show.delay.fill @results[res]["seriesid"]
-#				populate(@results[res]["seriesid"])
-#				series = tvdb.get_series_by_id(@results[res]["seriesid"])
-#				@show.network = series.network()
-#				@show.genre = series.genres()[0] #Just gets the first genre of possibly many
-#				@show.minutes = series.runtime() #Running time of an episode in minutes
-#				@show.rating = series.rating()
-#				@show.banner = @results[res]["banner"] #A link to an image hosten on thetvdb.com
+				@show.seriesid = @results[res]["seriesid"]
 				
 				if @show.save #only saves if there are no duplicates
-					@show.fill @results[res]["seriesid"]
+#					@show.delay.fill @results[res]["seriesid"] #this only works if you have a computer doing rake jobs:work
+					@show.fill @show.seriesid
 					redirect_to @show
 					return #This needs to be here to prevent a rails error, so says Rails
 				else
@@ -45,15 +38,4 @@ class ShowsController < ApplicationController
 		render 'error'
 		
 	end
-	
-	def populate(seriesid)
-		tvdb = TvdbParty::Search.new("F6EA8F2FD26C08BF")
-		series = tvdb.get_series_by_id(seriesid)
-		@show.network = series.network()
-		@show.genre = series.genres()[0] #Just gets the first genre of possibly many
-		@show.minutes = series.runtime() #Running time of an episode in minutes
-		@show.rating = series.rating()
-	end
-#	handle_asynchronously :populate
-	
 end
