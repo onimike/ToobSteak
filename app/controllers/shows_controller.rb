@@ -8,6 +8,7 @@ class ShowsController < ApplicationController
 	
 	def new
 		@show = Show.new
+		@title = "New show"
 	end
 	
 	def create

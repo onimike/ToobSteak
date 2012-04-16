@@ -1,5 +1,21 @@
 ###http://toobsteak.heroku.com/
 
+#####Commit notes: (Apr 15 2:30a.m. - Mike Romain)
+######Figured out Delayed_Job Gem
++ So Delayed_Job is a gem that allows us to run a process in the
+background. In the case of our app, it would be populating the shows
+database with complete values so it takes less time, therefore reducing
+timeouts.
+
++ However, you need a "worker" to do this, which Heroku charges for. The
+easy way out is to do "heroku rake jobs:work" and your machine will act
+as worker, but as soon as you exit jobs:work or close your terminal, it
+will stop doing it.
+
++ Solution? Either deal with timeouts, pay for heroku, or have a PC
+running rake jobs:work during our presentation.
+
+
 #####Commit notes: (Apr 15 3:20p.m. - Mike Romain)
 ######I had to fix some stuff with the shows to make it work on heroku, so whenever you make database changes, remember to:
 + heroku rake db:migrate (do this after pushing to heroku), and if that doesn't fix it, do:
