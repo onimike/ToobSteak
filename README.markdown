@@ -1,6 +1,6 @@
 ###http://toobsteak.heroku.com/
 
-#####Commit notes: (Apr 15 2:30a.m. - Mike Romain)
+#####Commit notes: (Apr 16 2:30a.m. - Mike Romain)
 ######Figured out Delayed_Job Gem
 + So Delayed_Job is a gem that allows us to run a process in the
 background. In the case of our app, it would be populating the shows
