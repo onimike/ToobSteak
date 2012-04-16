@@ -88,6 +88,7 @@ PLATFORMS
 
 DEPENDENCIES
   annotate (= 2.4.0)
+  delayed_job
   delayed_job_active_record
   rails (= 3.0.11)
   sqlite3
