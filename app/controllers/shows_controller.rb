@@ -6,9 +6,9 @@ class ShowsController < ApplicationController
 		@show = Show.find(params[:id])
 	end
 
-	 def index
-    @shows = Show.paginate(:page => params[:page], :per_page => 10)
-  end
+	def index
+		@shows = Show.paginate(:page => params[:page], :per_page => 10, :order => :name)
+	end
 
 	def new
 		@show = Show.new
