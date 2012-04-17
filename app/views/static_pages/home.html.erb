@@ -9,7 +9,7 @@
 	<% else %>
 			<p>No shows have been added.</p>
 	<% end %>
-	
+
 <br \>
 <% results = Show.where(:airday => Time.now.strftime("%a")) %>
 	<p>On Today:</p>
@@ -22,4 +22,3 @@
 	<% else %>
 		<p>None of the added shows are airing today.</p>
 	<% end %>
-		
