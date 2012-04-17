@@ -1,9 +1,5 @@
 <h3>Welcome to ToobSteak!</h3>
 
-<% if signed_in? %>
-        <%= render 'shared/user_info' %>
-        <%= render 'shared/stats' %>
-<% end %>
 <% recent = Show.last(10).reverse %> <!-- Displays the 10 most recent shows in descending order, or nothing if there are no shows. -->
 	<p>Recently watched:</p>
 	<% if !recent.nil? %> <!-- If there are shows in the database -->

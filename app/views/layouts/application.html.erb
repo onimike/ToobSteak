@@ -6,13 +6,13 @@
 		<%= render 'layouts/stylesheets' %>
   </head>
   <body>
-  
+
 <div class="container">
-	
+
       <header>
         <a href="/" </a><%= image_tag("logo.png", :alt => "ToobSteak Home", :class => "round") %>
         <nav class="round">
-		
+
 		<div class ="navigationBar">
           <ul>
             <li><%= link_to "Home", '/' %></li>
@@ -22,6 +22,9 @@
             <% if signed_in? %>
                <li><%= link_to "Profile", current_user %></li>
                <li><%= link_to "Edit Profile", edit_user_path(current_user) %></li>
+                       <%= render 'shared/user_info' %>
+        <%= render 'shared/stats' %>
+
                <li>Not <%= current_user.name%>? <%= link_to "Sign out", signout_path, :method => :delete %></li>
             <% else %>
               <li>New user? <%= link_to "Sign up now!", signup_path %></li>
@@ -29,7 +32,7 @@
             <% end %>
 			      <li><%= link_to "New show", newshow_path%></li>
           </ul>
-		  
+
 </div> <!-- class="navigationBar"-->
         </nav>
       </header>
@@ -39,7 +42,7 @@
         <% end %>
         <%= yield %>
       </section>
-	  
+
 </div> <!-- class="container"-->
   </body>
 </html>
