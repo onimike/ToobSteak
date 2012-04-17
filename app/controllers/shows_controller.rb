@@ -6,9 +6,9 @@ class ShowsController < ApplicationController
 		@show = Show.find(params[:id])
 	end
 
-	 def index
-    @shows = Show.paginate(:page => params[:page], :per_page => 10)
-  end
+	def index
+		@shows = Show.paginate(:page => params[:page], :per_page => 10, :order => :name)
+	end
 
 	def new
 		@show = Show.new
@@ -30,10 +30,12 @@ class ShowsController < ApplicationController
 
 				if @show.save #only saves if there are no duplicates
 #					@show.delay.fill @results[res]["seriesid"] #this only works if you have a computer doing rake jobs:work
+          flash[:success] = "Show Added Successfully!"
 					@show.fill @show.seriesid
 					redirect_to @show
 					return #This needs to be here to prevent a rails error, so says Rails
 				else
+				  flash.now[:error] = "ERROR: Show Not Added"
 					@results.delete_at(res) #remove from results array so we don't suggest the same show on the error page
 				end
 			end
