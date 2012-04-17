@@ -15,8 +15,9 @@ class Show < ActiveRecord::Base
 		update_attribute :minutes, series.runtime() #Running time of an episode in minutes
 		update_attribute :rating, series.rating()
 		update_attribute :airtime, series.air_time()
-		update_attribute :airday, series.episodes.last.air_date.strftime("%a")
-		update_attribute :lastairyear, series.episodes.last.air_date.to_s[0,4]
+		update_attribute :airday, series.first_aired().strftime("%a")
+	#	update_attribute :airday, series.episodes.last.air_date.strftime("%a")
+	#	update_attribute :lastairyear, series.episodes.last.air_date.to_s[0,4]
 		
 	end
 end

@@ -15,10 +15,10 @@
 	<p>On Today:</p>
 	<% if !results.empty? %> <!-- If there are shows today -->
 		<% results.each_index do |i| %>
-			<% if Time.now.to_s[0,4].to_i - results[i]["lastairyear"].to_i <= 2 %>
-				<%= link_to results[i]["name"], "/shows/#{results[i]["id"]}" %><br \>
-			<% end %>
+			<%= link_to results[i]["name"], "/shows/#{results[i]["id"]}" %><br \>
 		<% end %>
 	<% else %>
 		<p>None of the added shows are airing today.</p>
 	<% end %>
+	
+	
