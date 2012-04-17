@@ -1,6 +1,14 @@
 ToobSteak::Application.routes.draw do
+  resources :users do
+    member do
+      get :following, :followers
+    end
+  end
+
   resources :users, :shows
   resources :sessions, :only => [:new, :create, :destroy]
+
+
 
   #routes
   match '/newshow', :to => 'shows#new'
@@ -10,7 +18,7 @@ ToobSteak::Application.routes.draw do
   match '/help',    :to => 'static_pages#help'
   match '/signin',  :to => 'sessions#new'
   match '/signout', :to => 'sessions#destroy'
-  
+
   #/
   root :to => 'static_pages#home'
 
