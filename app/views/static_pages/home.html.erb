@@ -7,3 +7,15 @@
 			<%= link_to recent[s]["name"], "/shows/#{recent[s]["id"]}" %><br \>
 		<% end %>
 	<% end %>
+	
+<br \>
+<% results = Show.where(:airday => Time.now.strftime("%a")) %>
+	<p>On Today:</p>
+	<% if !results.empty? %> <!-- If there are shows today -->
+		<% results.each_index do |i| %>
+			<%= link_to results[i]["name"], "/shows/#{results[i]["id"]}" %><br \>
+		<% end %>
+	<% else %>
+		<p>None of the added shows are airing today.</p>
+	<% end %>
+		
