@@ -1,1 +1,16 @@
+.container {
+  width: 710px;
+}
 
+body {
+  background: #99cc99;
+}
+
+header {
+  padding-top: 50px;
+}
+
+header img {
+  padding: 1em;
+  background: #33cc66;
+}
