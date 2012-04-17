@@ -1,11 +1,23 @@
-Name: <%= @show.name %><br \>
-Description: <%= @show.description %><br \>
-Network: <%= @show.network %><br \>
-Airtime: <%= @show.airtime %><br \>
-Air Day: <%= @show.airday %><br \>
-Genre: <%= @show.genre %><br \>
-Length: <%= @show.minutes %> minutes<br \>
-Rating: <%= @show.rating %><br \>
-<!-- Banner: <%= @show.banner %> <br \>
-<%= image_tag "http://www.thetvdb.com/banners/#{@show.banner}" %> -->
-<!-- I can't get this image tag to actually work in Localhost, but the URL this generates is valid. Right click, copy image url, and paste it into your browser. Ideas? -->
+<div class="showPage">
+	<body>
+<div class="showName">
+	<h1><%= @show.name %><br \></h1>
+</div> <!-- class="showName"-->
+
+<div class="additionalShowInfo">
+	<strong>Network:</strong> <%= @show.network %><br \>
+	<strong>Air Time:</strong> <%= @show.airtime %><br \>
+	<strong>Air Day:</strong> <%= @show.airday %><br \>
+	<strong>Genre:</strong> <%= @show.genre %><br \>
+	<strong>Length:</strong> <%= @show.minutes %> minutes<br \>
+	<strong>Rating:</strong> <%= @show.rating %><br \>
+</div><!-- class="additionalShowInfo"-->
+<br>
+<div class="showDescription">
+	<strong>Description:</strong> <%= @show.description %><br \>
+</div> <!-- class="showDescription"-->
+	<!-- Banner: <%= @show.banner %> <br \>
+	<%= image_tag "http://www.thetvdb.com/banners/#{@show.banner}" %> -->
+	<!-- I can't get this image tag to actually work in Localhost, but the URL this generates is valid. Right click, copy image url, and paste it into your browser. Ideas? -->
+	</body>
+</div>

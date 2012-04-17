@@ -17,9 +17,10 @@ header img {
 
 section {
   margin-top: 1em;
+  margin-left: 15em;
   font-size: 120%;
   padding: 20px;
-  background: #fff;
+  background: #888888;
 }
 
 section h1 {
@@ -29,17 +30,18 @@ section h1 {
 /* -------------------------------------Links ----------------------------------- */
 
 a {
-  color: #09c;
+  color: #aa0000;
   text-decoration: none;
 }
 
 a:hover {
-  color: #069;
+  color: #ee0000;
   text-decoration: underline;
+  background: #888888;
 }
 
 a:visited {
-  color: #069;
+  color: #cc0000;
 }
 
 /* -------------------------------- Navigation -------------------------------- */
@@ -78,21 +80,6 @@ nav ul li a:hover {
   text-decoration: underline;
 }
 
-/* -------------------------------- Sign up button -------------------------------- */
-
-a.signup_button {
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-  text-align: center;
-  width: 190px;
-  color: #fff;
-  background: #006400;
-  font-size: 150%;
-  font-weight: bold;
-  padding: 20px;
-} 
-
 /* -------------------------------- Round corners -------------------------------- */
 
 .round {
@@ -104,11 +91,11 @@ a.signup_button {
 
 /* -------------------------------- footer -------------------------------- */
 footer {
-  text-align: center;
+  text-align: right;
   margin-top: 10px;
   width: 710px;
   margin-left: auto;
-  margin-right: auto;
+  margin-right: 2em;
 }
 
 footer nav {
@@ -134,19 +121,14 @@ td.sidebar {
   background: #ffc;
 }
 
-.profile img.gravatar {
-  border: 1px solid #999;
-  margin-bottom: -15px;
-}
-
 div.field, div.actions {
   margin-bottom: 10px;
 } 
 
 .field_with_errors {
   margin-top: 10px;
-  padding: 2px;
-  background-color: red;
+  padding: 1px;
+  background-color: #aa0000;
   display: table;
 }
 
@@ -157,12 +139,12 @@ div.field, div.actions {
 
 /* -------------------------------- Error Handling --------------------------------*/
 #error_explanation {
-  width: 400px;
-  border: 2px solid red;
+  width: 300px;
+  border: 2px #aa0000;
   padding: 7px;
   padding-bottom: 12px;
   margin-bottom: 20px;
-  background-color: #f0f0f0;
+  background-color: #bbbbbb;
 }
 
 #error_explanation h2 {
@@ -171,17 +153,20 @@ div.field, div.actions {
   padding: 5px 5px 5px 15px;
   font-size: 12px;
   margin: -7px;
-  background-color: #c00;
+  background-color: #aa0000;
   color: #fff;
 }
 
 #error_explanation p {
-  color: #333;
+  color: #aa0000;
   margin-bottom: 0;
   padding: 5px;
 }
 
 #error_explanation ul li {
   font-size: 12px;
-  list-style: square;
+  list-style: circle;
 }
+
+/* show page formating*/
+
