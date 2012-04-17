@@ -7,7 +7,7 @@ class ShowsController < ApplicationController
 	end
 	
 	 def index
-    @shows = Show.paginate(:page => params[:page])
+    @shows = Show.paginate(:page => 10)
   end
 	
 	def new
