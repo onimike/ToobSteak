@@ -42,7 +42,7 @@ ActiveRecord::Schema.define(:version => 20120417204413) do
 
   create_table "shows", :force => true do |t|
     t.string   "name"
-    t.text     "description"
+    t.text   "description"
     t.string   "network"
     t.integer  "minutes"
     t.decimal  "rating"
