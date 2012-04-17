@@ -6,6 +6,7 @@ gem 'sqlite3'
 gem 'tvdb_party'
 gem 'delayed_job'
 gem 'delayed_job_active_record'
+gem 'will_paginate', '3.0.pre2'
 
 group :development do
 	gem 'annotate', '2.4.0'

@@ -19,6 +19,11 @@ class UsersController < ApplicationController
     end
   end
 
+  def index
+    @title = "Welcome to ToobSteak!"
+    @users = User.paginate(:page => params[:page])
+  end
+
   def show
     @user = User.find(params[:id])
     @title = "Welcome to ToobSteak!"

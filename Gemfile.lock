@@ -82,6 +82,7 @@ GEM
     tvdb_party (0.6.2)
       httparty (>= 0.6.1)
     tzinfo (0.3.32)
+    will_paginate (3.0.pre2)
 
 PLATFORMS
   ruby
@@ -93,3 +94,4 @@ DEPENDENCIES
   rails (= 3.0.11)
   sqlite3
   tvdb_party
+  will_paginate (= 3.0.pre2)

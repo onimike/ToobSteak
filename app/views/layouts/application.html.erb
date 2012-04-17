@@ -13,6 +13,7 @@
           <ul>
             <li><%= link_to "Home", '/' %></li>
             <li><%= link_to "Help",  '/help' %></li>
+            <li><%= link_to "All Users", users_path %></li>
             <% if signed_in? %>
                <li><%= link_to "Profile", current_user %></li>
                <li><%= link_to "Edit Profile", edit_user_path(current_user) %></li>
