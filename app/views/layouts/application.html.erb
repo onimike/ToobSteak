@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-	<title><%= @title %></title>
+	<title>Welcome to ToobSteak!</title>
 		<%= csrf_meta_tag %>
 		<%= render 'layouts/stylesheets' %>
   </head>
@@ -14,6 +14,7 @@
             <li><%= link_to "Home", '/' %></li>
             <li><%= link_to "Help",  '/help' %></li>
             <li><%= link_to "All Users", users_path %></li>
+            <li><%= link_to "All Shows", shows_path %></li>
             <% if signed_in? %>
                <li><%= link_to "Profile", current_user %></li>
                <li><%= link_to "Edit Profile", edit_user_path(current_user) %></li>

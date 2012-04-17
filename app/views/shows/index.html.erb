@@ -1,0 +1,13 @@
+<h1>All Shows</h1>
+
+<%= will_paginate %>
+
+<ul>
+  <% @shows.each do |show| %>
+    <li>
+      <%= link_to show.name, show %>
+    </li>
+  <% end %>
+</ul>
+
+<%= will_paginate %>

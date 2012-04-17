@@ -6,9 +6,12 @@ class ShowsController < ApplicationController
 		@show = Show.find(params[:id])
 	end
 	
+	 def index
+    @shows = Show.paginate(:page => params[:page])
+  end
+	
 	def new
 		@show = Show.new
-		@title = "New show"
 	end
 	
 	def create

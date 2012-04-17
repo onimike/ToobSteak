@@ -4,7 +4,6 @@ class UsersController < ApplicationController
 
   def new
     @user = User.new
-    @title = "Sign up"
   end
 
   def create
@@ -14,24 +13,20 @@ class UsersController < ApplicationController
       flash[:success] = "Welcome to ToobSteak!"
       redirect_to @user
     else
-      @title = "Sign up"
       render 'new'
     end
   end
 
   def index
-    @title = "Welcome to ToobSteak!"
     @users = User.paginate(:page => params[:page])
   end
 
   def show
     @user = User.find(params[:id])
-    @title = "Welcome to ToobSteak!"
   end
 
   def edit
     @user = User.find(params[:id])
-    @title = "Edit user"
   end
 
   def update
