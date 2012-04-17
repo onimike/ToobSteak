@@ -1,19 +1,19 @@
-<!DOCTYPE html>
-<html>
-  <head>
-	<title>Welcome to ToobSteak!</title>
-		<%= csrf_meta_tag %>
-		<%= render 'layouts/stylesheets' %>
-  </head>
-  <body>
+	<!DOCTYPE html>
+	<html>
+		<head>
+			<title>Welcome to ToobSteak!</title>
+				<%= csrf_meta_tag %>
+				<%= render 'layouts/stylesheets' %>
+		</head>
+		<body>
   
 <div class="container">
-	
-      <header>
+		<header>
         <a href="/" </a><%= image_tag("logo.png", :alt => "ToobSteak Home", :class => "round") %>
         <nav class="round">
+		</header>
 		
-		<div class ="navigationBar">
+<div class ="navigationBar">
           <ul>
             <li><%= link_to "Home", '/' %></li>
             <li><%= link_to "Help",  '/help' %></li>
@@ -22,24 +22,26 @@
             <% if signed_in? %>
                <li><%= link_to "Profile", current_user %></li>
                <li><%= link_to "Edit Profile", edit_user_path(current_user) %></li>
-               <li>Not <%= current_user.name%>? <%= link_to "Sign out", signout_path, :method => :delete %></li>
-            <% else %>
-              <li>New user? <%= link_to "Sign up now!", signup_path %></li>
-              <li><%= link_to "Sign in", signin_path %></li>
-            <% end %>
-			      <li><%= link_to "New show", newshow_path%></li>
-          </ul>
+				<li>Not <%= current_user.name%>? <%= link_to "Sign out", signout_path, :method => :delete %></li>
+				<% else %>
+				<li>New user? <%= link_to "Sign up now!", signup_path %></li>
+				<li><%= link_to "Sign in", signin_path %></li>
+				<% end %>
+					<li><%= link_to "New show", newshow_path%></li>
+			</ul>
 		  
 </div> <!-- class="navigationBar"-->
-        </nav>
-      </header>
-      <section class="round">
-        <% flash.each do |key, value| %>
-          <div class="flash <%= key %>"><%= value %></div>
-        <% end %>
-        <%= yield %>
-      </section>
+			</nav>
+
+		<section class="round">
+			<% flash.each do |key, value| %>
+<div class="flash <%= key %>">
+			<%= value %>
+</div> <!-- class="flash">
+			<% end %>
+			<%= yield %>
+		</section>
 	  
 </div> <!-- class="container"-->
-  </body>
-</html>
+		</body>
+	</html>
