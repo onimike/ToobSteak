@@ -30,6 +30,7 @@ class ShowsController < ApplicationController
 				
 				if @show.save #only saves if there are no duplicates
 #					@show.delay.fill @results[res]["seriesid"] #this only works if you have a computer doing rake jobs:work
+          flash[:success] = "Show Added!"
 					@show.fill @show.seriesid
 					redirect_to @show
 					return #This needs to be here to prevent a rails error, so says Rails
