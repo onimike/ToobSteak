@@ -7,7 +7,7 @@ class ShowsController < ApplicationController
 	end
 	
 	 def index
-    @shows = Show.paginate(:page => params[:page])
+    @shows = Show.paginate(:page => 10)
   end
 	
 	def new
@@ -25,7 +25,7 @@ class ShowsController < ApplicationController
 
 				@show.name = @results[res]["SeriesName"]
 				@show.description = @results[res]["Overview"]
-				@show.banner = @results[res]["banner"]
+#				@show.banner = @results[res]["banner"]
 				@show.seriesid = @results[res]["seriesid"]
 				
 				if @show.save #only saves if there are no duplicates
