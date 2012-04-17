@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120417193916) do
+ActiveRecord::Schema.define(:version => 20120417204413) do
 
   create_table "delayed_jobs", :force => true do |t|
     t.integer  "priority",   :default => 0
@@ -42,12 +42,20 @@ ActiveRecord::Schema.define(:version => 20120417193916) do
 
   create_table "shows", :force => true do |t|
     t.string   "name"
-    t.string   "description"
+    t.text     "description"
+    t.string   "network"
+    t.integer  "minutes"
+    t.decimal  "rating"
+    t.integer  "comments"
+    t.integer  "followers"
+    t.string   "genre"
+    t.string   "banner"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "seriesid"
     t.string   "airtime"
     t.string   "airday"
+    t.string   "lastairyear"
   end
 
   add_index "shows", ["name"], :name => "index_shows_on_name", :unique => true
