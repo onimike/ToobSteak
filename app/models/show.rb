@@ -14,5 +14,8 @@ class Show < ActiveRecord::Base
 		update_attribute :genre, series.genres()[0] #Just gets the first genre of possibly many
 		update_attribute :minutes, series.runtime() #Running time of an episode in minutes
 		update_attribute :rating, series.rating()
+		update_attribute :airtime, series.air_time()
+		update_attribute :airday, series.first_aired().strftime("%a")
+		
 	end
 end
