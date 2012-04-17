@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120416090305) do
+ActiveRecord::Schema.define(:version => 20120417191228) do
 
   create_table "delayed_jobs", :force => true do |t|
     t.integer  "priority",   :default => 0
@@ -29,16 +29,20 @@ ActiveRecord::Schema.define(:version => 20120416090305) do
 
   add_index "delayed_jobs", ["priority", "run_at"], :name => "delayed_jobs_priority"
 
+  create_table "relationships", :force => true do |t|
+    t.integer  "follower_id"
+    t.integer  "followed_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "relationships", ["followed_id"], :name => "index_relationships_on_followed_id"
+  add_index "relationships", ["follower_id", "followed_id"], :name => "index_relationships_on_follower_id_and_followed_id", :unique => true
+  add_index "relationships", ["follower_id"], :name => "index_relationships_on_follower_id"
+
   create_table "shows", :force => true do |t|
     t.string   "name"
-    t.text     "description"
-    t.string   "network"
-    t.integer  "minutes"
-    t.decimal  "rating"
-    t.integer  "comments"
-    t.integer  "followers"
-    t.string   "genre"
-    t.string   "banner"
+    t.string   "description"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "seriesid"
