@@ -6,10 +6,14 @@
 		<%= render 'layouts/stylesheets' %>
   </head>
   <body>
-    <div class="container">
+  
+<div class="container">
+	
       <header>
         <a href="/" </a><%= image_tag("logo.png", :alt => "ToobSteak Home", :class => "round") %>
         <nav class="round">
+		
+		<div class ="navigationBar">
           <ul>
             <li><%= link_to "Home", '/' %></li>
             <li><%= link_to "Help",  '/help' %></li>
@@ -25,6 +29,8 @@
             <% end %>
 			      <li><%= link_to "New show", newshow_path%></li>
           </ul>
+		  
+</div> <!-- class="navigationBar"-->
         </nav>
       </header>
       <section class="round">
@@ -33,6 +39,7 @@
         <% end %>
         <%= yield %>
       </section>
-    </div>
+	  
+</div> <!-- class="container"-->
   </body>
 </html>
