@@ -16,13 +16,13 @@
   -moz-border-radius:    10px;
   -webkit-border-radius: 10px;
   border-radius:         30px;
-	background: #888888;
+	background: #bbbbbb;
 	/*background: url('../images/mute-stripes.jpg');*/
 	/*background: url('../images/tissue.jpg');*/
 }
 
 body {
-	background: #bbbbbb; 
+	background: #888888; 
 	/*background: url('../images/grunge-black.jpg');*/
 	font-size: 120%;
 }
