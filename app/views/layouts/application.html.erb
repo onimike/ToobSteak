@@ -39,10 +39,11 @@
 			<% flash.each do |key, value| %>
 <div class="flash <%= key %>">
 			<%= value %>
-</div> <!-- class="flash">
+</div>
 			<% end %>
 			<%= yield %>
 </section>
+<!--
 		<footer>
 		<nav class = "round shadow">
 			<%= link_to "Home", '/' %> | 

@@ -13,6 +13,7 @@
 	<strong>Rating:</strong> <%= @show.rating %><br \>
 </div><!-- class="additionalShowInfo"-->
 <br>
+<strong>Number of Microposts:</strong> <%= @show.microposts.count %><br \>
 <div class="showDescription">
 	<strong>Description:</strong> <%= @show.description %><br \>
 </div> <!-- class="showDescription"-->
@@ -21,3 +22,33 @@
 	<!-- I can't get this image tag to actually work in Localhost, but the URL this generates is valid. Right click, copy image url, and paste it into your browser. Ideas? -->
 	</body>
 </div>
+
+
+<table class="front" summary="For signed-in users">
+    <tr>
+      <td class="main">
+        <h1 class="micropost">Comment on <%= @show.name %></h1>
+        <%= render 'shared/micropost_form' %>
+      </td>
+      <td class="sidebar round">
+        <%= render 'shared/show_info' %>
+      </td>
+    </tr>
+</table>
+
+<table>
+  <tr>
+    <td>
+      <% unless @show.microposts.empty? %>
+        <% @show.microposts.each do |post| %>
+        
+          <p>User <%= post.user_id %> says:</p>
+          <p><%= post.content %> </p>
+        
+        <% end %>
+          <!--<%= render @microposts %>-->
+        <%= will_paginate @microposts %>
+      <% end %>
+    </td>
+  </tr>
+</table>

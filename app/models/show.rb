@@ -5,6 +5,8 @@ class Show < ActiveRecord::Base
 	
 	validates :name,  :presence => true,
 					  :uniqueness => true			
+					  
+	has_many :microposts, :dependent => :destroy
 
 					  
 	def fill(seriesid)
