@@ -9,11 +9,14 @@
   
 <div class="container">
 		<header>
-			<a href="/" </a><%= image_tag("logo.png", :alt => "ToobSteak Home", :class => "round") %>
+			<a href="/" </a><%= image_tag("logo.png", :alt => "ToobSteak Home", :class => "round shadow") %>
 		</header>
-<div class="span-4">
-<div class ="navigationBar">
-<nav class="round">
+
+
+<div class = "navigationBar">
+<div class = "span-4">				
+<nav class = "round shadow">
+
 			<%= link_to "All Users", users_path %><br>
 			<%= link_to "All Shows", shows_path %><br>
         <% if signed_in? %>
@@ -26,22 +29,28 @@
 		<% end %>
 			<%= link_to "New show", newshow_path%>
 			</ul>
-</nav>		  
-</div> <!-- class="navigationBar"-->
-</div><!-- class ="span 4"-->
+
+</nav>
+</div> <!-- class = "span 4" -->
+</div> <!-- class = "navigationBar" -->
 
 
-<section class="round">
+<section class="round shadow">
 			<% flash.each do |key, value| %>
 <div class="flash <%= key %>">
 			<%= value %>
-</div> <!-- class="flash">
+</div>
 			<% end %>
 			<%= yield %>
 </section>
+<!--
 		<footer>
+		<nav class = "round shadow">
 			<%= link_to "Home", '/' %> | 
-			<%= link_to "Help",  '/help' %>
+			<%= link_to "About", '/about' %> | 
+			<%= link_to "Contact", '/contact' %> <!--| 
+			<%= link_to "Help",  '/help' %>-->
+		</nav>
 		</footer>
 </div> <!-- class="container"-->
 		</body>

@@ -4,6 +4,9 @@ class ShowsController < ApplicationController
 
 	def show
 		@show = Show.find(params[:id])
+		sign_in_show @show
+		@microposts = @show.microposts.paginate(:page => params[:page])
+		@micropost = Micropost.new
 	end
 
 	def index

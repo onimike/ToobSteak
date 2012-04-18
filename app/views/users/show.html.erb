@@ -2,11 +2,19 @@
   <tr>
     <td>
       <h1>Profile Information</h1>
-      <strong>Name</strong> <%= @user.name %><br />
-	  <strong>Email: </strong>  <%= @user.email %>
+      <strong>User Name:</strong> <br> <%= @user.name %><br />
+	  <strong>Email: </strong>  <br> <%= @user.email %>
     </td>
     <td>
-      twitter stuff goes here
     </td>
+  </tr>
+  <tr>
+    <% unless @user.microposts.empty? %>
+      <table>
+	    My Comments:
+        <%= render @microposts %>
+      </table>
+      <%= will_paginate @microposts %>
+    <% end %>
   </tr>
 </table>

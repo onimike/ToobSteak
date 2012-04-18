@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120417204413) do
+ActiveRecord::Schema.define(:version => 20120418083557) do
 
   create_table "delayed_jobs", :force => true do |t|
     t.integer  "priority",   :default => 0
@@ -29,6 +29,16 @@ ActiveRecord::Schema.define(:version => 20120417204413) do
 
   add_index "delayed_jobs", ["priority", "run_at"], :name => "delayed_jobs_priority"
 
+  create_table "microposts", :force => true do |t|
+    t.string   "content"
+    t.integer  "show_id"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "microposts", ["show_id", "created_at"], :name => "index_microposts_on_show_id_and_created_at"
+
   create_table "relationships", :force => true do |t|
     t.integer  "follower_id"
     t.integer  "followed_id"
@@ -42,7 +52,7 @@ ActiveRecord::Schema.define(:version => 20120417204413) do
 
   create_table "shows", :force => true do |t|
     t.string   "name"
-    t.text   "description"
+    t.text     "description"
     t.string   "network"
     t.integer  "minutes"
     t.decimal  "rating"
