@@ -18,13 +18,13 @@
   border-radius:         30px;
 	/*background: url('../images/tissue.jpg');*/
     /*background: url('../images/grunge-wall.jpg');*/
-	background: url('../images/mute-stripes.jpg');
+	background: url('../public/images/mute-stripes.jpg');
 	/*background: url('../images/tissue.jpg');*/
 }
 
 body {
-	/*background: #bbbbbb; */
-	background: url('../images/grunge-black.jpg');
+	background: #bbbbbb; 
+	/*background: url('../images/grunge-black.jpg');*/
 	/*background: url('../images/grunge.jpg');*/
 	/*background: url('../images/paper4.jpg');*/
 	font-size: 120%;
