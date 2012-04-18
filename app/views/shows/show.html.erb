@@ -42,7 +42,7 @@
       <% unless @show.microposts.empty? %>
         <% @show.microposts.each do |post| %>
         
-          <p>User <%= post.user_id %> says:</p>
+          <p>At <%= post.created_at %> <br> User <%= post.user_id %> says:</p>
           <p><%= post.content %> </p>
         
         <% end %>
