@@ -37,7 +37,7 @@ ActiveRecord::Schema.define(:version => 20120418083557) do
     t.datetime "updated_at"
   end
 
-  add_index "microposts", ["show_id", "created_at"], :name => "index_microposts_on_show_id_and_created_at"
+  add_index "microposts", ["show_id", "user_id", "created_at"], :name => "index_microposts_on_show_id_and_user_id_and_created_at"
 
   create_table "relationships", :force => true do |t|
     t.integer  "follower_id"
