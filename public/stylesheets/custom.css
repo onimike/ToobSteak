@@ -54,6 +54,10 @@ section h1 {
   color: #aa0000 ;
 }
 
+ul li {
+	list-style: circle;
+}
+
 /* --------------------Links ------------------ */
 
 a {
