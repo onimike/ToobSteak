@@ -9,12 +9,18 @@
     </td>
   </tr>
   <tr>
-    <% unless @user.microposts.empty? %>
-      <table>
-	    My Comments:
-        <%= render @microposts %>
-      </table>
-      <%= will_paginate @microposts %>
-    <% end %>
+    <td>
+      <% unless @user.microposts.empty? %>
+        <% @user.microposts.each do |post| %>
+        
+          <p>At <%= post.created_at.in_time_zone("Pacific Time (US & Canada)") %> <br><%= link_to User.find(post.user_id).name, "/users/#{post.user_id}"%> says about <%= link_to Show.find(post.show_id).name, "/shows/#{post.show_id}"%>:</p>
+          <p><%= post.content %></p>
+        <% end %>
+          <!--<%= render @microposts %>-->
+        <%= will_paginate @microposts %>
+      <% end %>
+    </td>
   </tr>
 </table>
+
+
