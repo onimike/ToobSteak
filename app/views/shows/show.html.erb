@@ -41,8 +41,8 @@
       <% unless @show.microposts.empty? %>
         <% @show.microposts.each do |post| %>
         
-          <p>At <%= post.created_at %> <br><%= User.find(post.user_id).name %> says:</p>
-          <p><%= post.content %> </p>
+          <p>At <%= post.created_at.in_time_zone("Pacific Time (US & Canada)") %> <br><%= link_to User.find(post.user_id).name, "/users/#{post.user_id}"%> says:</p>
+          <p><%= post.content %></p>
         
         <% end %>
           <!--<%= render @microposts %>-->
