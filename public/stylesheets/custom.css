@@ -25,6 +25,7 @@ body {
 	background: #888888; 
 	/*background: url('../images/grunge-black.jpg');*/
 	font-size: 120%;
+	color: #aa0000 ;
 }
 
 header {
@@ -45,7 +46,8 @@ section {
 }
 
 section h1 {
-  font-size: 200%;
+  font-size: 150%;
+  color: #aa0000 ;
 }
 
 /* --------------------Links ------------------ */
@@ -58,7 +60,7 @@ a {
 nav a:hover {
   color: #ee0000;
   text-decoration: underline;
-  background: #777777;
+  background: #888888;
 }
 
 a:visited {
@@ -80,7 +82,6 @@ footer {
   margin-top: 0.25em;
   width: 700px;
   margin-left: auto;
-  
 }
 
 footer nav {
@@ -114,9 +115,9 @@ div.field, div.actions {
 /* --------------- Error Handling ----------------*/
 
 .field_with_errors {
-  margin-top: 10px;
+  margin-top: 1em;
   padding: 1px;
-  background-color: #880000;
+  background-color: #ffcccc;
   display: table;
 }
 
@@ -127,16 +128,16 @@ div.field, div.actions {
 #error_explanation {
   width: 300px;
   border: 2px #aa0000;
-  padding: 7px;
-  padding-bottom: 12px;
-  margin-bottom: 20px;
-  background-color: #bbbbbb;
+  padding: 5px;
+  padding-bottom: 7px;
+  margin-bottom: 7px;
+  background-color: #dddddd;
 }
 
 #error_explanation h2 {
   text-align: left;
   font-weight: bold;
-  padding: 5px 5px 5px 15px;
+  padding: 5px 5px 5px 5px;
   font-size: 12px;
   margin: -7px;
   background-color: #aa0000;
