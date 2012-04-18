@@ -1,5 +1,5 @@
 .container {
-  width: 900px;
+  width: 800px;
 }
 
 /* box shadow*/
@@ -10,17 +10,24 @@
 	box-shadow: 3px 3px 4px #000;
 }
 
-/* -------------------------------- Round corners -------------------------------- */
+/* -------------- Round corners ----------------- */
 
 .round {
   -moz-border-radius:    10px;
   -webkit-border-radius: 10px;
-  border-radius:         10px;
+  border-radius:         30px;
+	/*background: url('../images/tissue.jpg');*/
+    /*background: url('../images/grunge-wall.jpg');*/
+	background: url('../images/mute-stripes.jpg');
+	/*background: url('../images/tissue.jpg');*/
 }
 
 body {
-  background: #bbbbbb;
-  font-size: 120%;
+	/*background: #bbbbbb; */
+	background: url('../images/grunge-black.jpg');
+	/*background: url('../images/grunge.jpg');*/
+	/*background: url('../images/paper4.jpg');*/
+	font-size: 120%;
 }
 
 header {
@@ -36,7 +43,7 @@ section {
   margin-top: 1em;
   margin-left: 9em;
   font-size: 120%;
-  padding: 20px;
+  padding: 1em;
   background: #888888;
 }
 
@@ -51,10 +58,10 @@ a {
   text-decoration: none;
 }
 
-a:hover {
+nav a:hover {
   color: #ee0000;
   text-decoration: underline;
-  background: #666666;
+  background: #777777;
 }
 
 a:visited {
@@ -66,17 +73,17 @@ a:visited {
 nav {
 	float: right;	margin-top: 1em;
 	background-color: #888888;
-	padding: 0 1em;
+	padding: .5em;
 	white-space: nowrap;
 }
 
 /* --------------- footer ------------------ */
 footer {
   text-align: right;
-  margin-top: 0.5em;
-  width: 710px;
+  margin-top: 0.25em;
+  width: 700px;
   margin-left: auto;
-  margin-right: 2em;
+  
 }
 
 footer nav {
