@@ -1,83 +1,13 @@
 .container {
-  width: 800px;
+  width: 900px;
 }
 
-body {
-  background: #bbbbbb;
-}
-
-header {
-  padding-top: 50px;
-}
-
-header img {
-  padding: 1em;
-  background: #888888;
-}
-
-section {
-  margin-top: 1em;
-  margin-left: 11em;
-  font-size: 120%;
-  padding: 20px;
-  background: #888888;
-}
-
-section h1 {
-  font-size: 200%;
-}
-
-/* -------------------------------------Links ----------------------------------- */
-
-a {
-  color: #aa0000;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #ee0000;
-  text-decoration: underline;
-  background: #888888;
-}
-
-a:visited {
-  color: #cc0000;
-}
-
-/* -------------------------------- Navigation -------------------------------- */
-
-nav {
-	float: right;	margin-top: 2em;
-}
-
-nav {
-  background-color: #888888;
-  padding: 0 1em;
-  white-space: nowrap;
-}
-
-nav ul {
-  margin: 0;
-  padding: 0;
-}
-
-nav ul li {
-  list-style-type: none;
-  display: inline-block;
-  padding: 0.2em 0;
-}
-
-nav ul li a {
-  padding: 0 5px;
-  font-weight: bold;
-}
-
-nav ul li a:visited {
-  color: #09c;
-}
-
-nav ul li a:hover {
-  text-decoration: underline;
+/* box shadow*/
+/* via http://robertnyman.com/2010/03/16/drop-shadow-with-css-for-all-web-browsers/ */
+.shadow {
+	-moz-box-shadow: 3px 3px 4px #000;
+	-webkit-box-shadow: 3px 3px 4px #000;
+	box-shadow: 3px 3px 4px #000;
 }
 
 /* -------------------------------- Round corners -------------------------------- */
@@ -88,8 +18,59 @@ nav ul li a:hover {
   border-radius:         10px;
 }
 
+body {
+  background: #bbbbbb;
+  font-size: 120%;
+}
 
-/* -------------------------------- footer -------------------------------- */
+header {
+  padding-top: 1em;
+}
+
+header img {
+  padding: 1em;
+  background: #888888;
+}
+
+section {
+  margin-top: 1em;
+  margin-left: 9em;
+  font-size: 120%;
+  padding: 20px;
+  background: #888888;
+}
+
+section h1 {
+  font-size: 200%;
+}
+
+/* --------------------Links ------------------ */
+
+a {
+  color: #aa0000;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ee0000;
+  text-decoration: underline;
+  background: #666666;
+}
+
+a:visited {
+  color: #cc0000;
+}
+
+/* ---------------- Navigation ------------------ */
+
+nav {
+	float: right;	margin-top: 1em;
+	background-color: #888888;
+	padding: 0 1em;
+	white-space: nowrap;
+}
+
+/* --------------- footer ------------------ */
 footer {
   text-align: right;
   margin-top: 0.5em;
@@ -102,7 +83,7 @@ footer nav {
   float: none;
 }
 
-/* -------------------------------- User show page -------------------------------- */
+/* -------------- User show page ----------------- */
 
 table.profile {
   width: 100%;
@@ -125,19 +106,20 @@ div.field, div.actions {
   margin-bottom: 10px;
 } 
 
+
+/* --------------- Error Handling ----------------*/
+
 .field_with_errors {
   margin-top: 10px;
   padding: 1px;
-  background-color: #aa0000;
+  background-color: #880000;
   display: table;
 }
 
 .field_with_errors label {
-  color: #fff;
+  color: #880000;
 }
 
-
-/* -------------------------------- Error Handling --------------------------------*/
 #error_explanation {
   width: 300px;
   border: 2px #aa0000;
@@ -168,5 +150,4 @@ div.field, div.actions {
   list-style: circle;
 }
 
-/* show page formating*/
-
+/* show page formating */
