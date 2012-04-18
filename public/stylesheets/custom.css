@@ -21,6 +21,10 @@
 	/*background: url('../images/tissue.jpg');*/
 }
 
+.additionalShowInfo{
+	font-size: 80%;
+}
+
 body {
 	background: #888888; 
 	/*background: url('../images/grunge-black.jpg');*/
@@ -57,7 +61,18 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  color: #ee0000;
+  text-decoration: underline;
+}
+
 nav a:hover {
+  color: #ee0000;
+  text-decoration: underline;
+  background: #888888;
+}
+
+.contentNav a:hover {
   color: #ee0000;
   text-decoration: underline;
   background: #888888;
