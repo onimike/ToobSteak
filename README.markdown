@@ -1,4 +1,17 @@
 ###http://toobsteak.heroku.com/
+#### CPSC473 Spring 2012
+##### Team 1 - require 'rails'
+
++ Aleksey Bukin
++ Iris Markofsky
++ Michael Robertson
++ Michael Romain
++ Yuta Takayama
+
+#### Links:
++ tvdb_party gem: https://github.com/maddox/tvdb_party
++ tvdb_party documentation: http://rubydoc.info/gems/tvdb_party/0.6.2/frames
++ delayed_job gem: https://github.com/collectiveidea/delayed_job
 
 #####Commit notes: (Apr 16 2:30a.m. - Mike Romain)
 ######Figured out Delayed_Job Gem
@@ -38,12 +51,3 @@ running rake jobs:work during our presentation.
 + Searching (by show name and user name? should be easy that way)
 + User profile (to display their microposts and shows)
 + User following (allow users to follow or favorite shows)
-
-#### CPSC473 Spring 2012
-##### Team 1 - require 'rails'
-
-+ Aleksey Bukin
-+ Iris Markofsky
-+ Michael Robertson
-+ Michael Romain
-+ Yuta Takayama
