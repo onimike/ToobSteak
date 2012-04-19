@@ -11,9 +11,10 @@
 	<strong>Genre:</strong> <%= @show.genre %><br \>
 	<strong>Length:</strong> <%= @show.minutes %> minutes<br \>
 	<strong>Rating:</strong> <%= @show.rating %><br \>
+	<strong>Number of posts about this show:</strong> <%= @show.microposts.count %><br \>
 </div><!-- class="additionalShowInfo"-->
 <br>
-<strong>Number of Microposts:</strong> <%= @show.microposts.count %><br \>
+
 <div class="showDescription">
 	<strong>Description:</strong> <%= @show.description %><br \>
 </div> <!-- class="showDescription"-->
@@ -22,32 +23,41 @@
 	<!-- I can't get this image tag to actually work in Localhost, but the URL this generates is valid. Right click, copy image url, and paste it into your browser. Ideas? -->
 	</body>
 </div>
-
-<table class="front" summary="For signed-in users">
+<br>
+<table>
     <tr>
-      <td class="main">
-        <h1 class="micropost">Comment on <%= @show.name %></h1>
+      <td>
+        <h1 class="micropost">
+		Comment on <%= @show.name %></h1>
         <%= render 'shared/micropost_form' %>
-      </td>
-      <td class="sidebar round">
-        <%= render 'shared/show_info' %>
-      </td>
+		</td>
+		<!--
+			<td>
+		<div class="sidebar round shadow">
+			<%= render 'shared/show_info' %>
+		</div>
+		</td> commented out cause it's not needed-->
     </tr>
 </table>
 
 <table>
   <tr>
     <td>
+<div class="micropostDisplay round shadow">
       <% unless @show.microposts.empty? %>
         <% @show.microposts.each do |post| %>
         
-          <p>At <%= post.created_at.in_time_zone("Pacific Time (US & Canada)") %> <br><%= link_to User.find(post.user_id).name, "/users/#{post.user_id}"%> says:</p>
-          <p><%= post.content %></p>
-        
+          <p>At <%= post.created_at.in_time_zone("Pacific Time (US & Canada)") %> <br>
+		  <div class="micropostUser">
+		  <%= link_to User.find(post.user_id).name, "/users/#{post.user_id}"%> says:
+		  </div>
+		  	<br><%= post.content %></p>
+			
         <% end %>
           <!--<%= render @microposts %>-->
         <%= will_paginate @microposts %>
       <% end %>
+</div>
     </td>
   </tr>
 </table>

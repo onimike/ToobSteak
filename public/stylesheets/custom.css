@@ -25,6 +25,21 @@
 	font-size: 80%;
 }
 
+.micropostDisplay{
+	font-size: 80%;
+	padding: 1em;
+}
+
+.sidebar{
+	background: #cccccc;
+	font-size: 80%;
+	padding:.5em;
+}
+
+.micropostUser{
+	font-size:120%;
+}
+
 body {
 	background: #888888; 
 	/*background: url('../images/grunge-black.jpg');*/
@@ -121,9 +136,9 @@ td.main {
 
 td.sidebar {
   width: 30%;
+  height: 30%;
   padding: 1em;
   vertical-align: top;
-  background: #ffc;
 }
 
 div.field, div.actions {
