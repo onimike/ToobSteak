@@ -4,6 +4,10 @@
 	<h1><%= @show.name %><br \></h1>
 </div> <!-- class="showName"-->
 
+<% if @show.airday == Time.now.strftime("%a") %>
+<strong><%= "Note: This show airs today!" %></strong><br /> <br>
+<% end %>
+
 <div class="additionalShowInfo">
 	<strong>Network:</strong> <%= @show.network %><br \>
 	<strong>Air Time:</strong> <%= @show.airtime %><br \>
