@@ -51,7 +51,9 @@
 		  <div class="micropostUser">
 		  <%= link_to User.find(post.user_id).name, "/users/#{post.user_id}"%> says:
 		  </div>
+		  <div class="userPost round shadow">
 		  	<br><%= post.content %></p>
+			</div>
 			
         <% end %>
           <!--<%= render @microposts %>-->
