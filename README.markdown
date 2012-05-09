@@ -13,6 +13,17 @@
 + tvdb_party documentation: http://rubydoc.info/gems/tvdb_party/0.6.2/frames
 + delayed_job gem: https://github.com/collectiveidea/delayed_job
 
+#####Commit notes: (May 8 11ish p.m. - Mike Romain)
+######Search Functionality (for Rails Tutorial Project)
++ Changes:
++ Added new routes to routes.rb
++ Added a search link to application.html.erb
++ Added a search function to shows_controller.rb
++ New files: /app/views/shows search.html.erb and noresult.html.erb
+
+If you have ideas to make it better, please let me know or by all means
+make some changes.
+
 #####Commit notes: (Apr 16 2:30a.m. - Mike Romain)
 ######Figured out Delayed_Job Gem
 + So Delayed_Job is a gem that allows us to run a process in the
