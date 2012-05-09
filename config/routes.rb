@@ -13,6 +13,7 @@ ToobSteak::Application.routes.draw do
 
   #routes
   match '/newshow', :to => 'shows#new'
+  match '/search', :to => 'shows#search'
   match '/about',	:to => 'static_pages#about'
   match '/signup',  :to => 'users#new'
   match '/contact', :to => 'static_pages#contact'

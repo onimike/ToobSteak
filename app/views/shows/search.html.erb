@@ -1,0 +1,7 @@
+<h1>Search for a show</h1>
+<p>Enter the name of your show below:</p>
+<%= form_for(@show) do |f| %>
+    <%= f.label :name %><br />
+    <%= f.search_field :name %>
+    <%= f.submit "Search" %>
+<% end %>

@@ -47,4 +47,28 @@ class ShowsController < ApplicationController
 		render 'error'
 
 	end
+	
+	def search
+		@show = ''
+		@search = params[:name]
+		
+		if !@search.nil?
+			@result = Show.select(:id).where("upper(name) = ?", @search.upcase).map(&:id)
+			if @result.empty?
+				render 'noresult'
+			else
+				redirect_to :action => "show", :id => @result
+			end
+		end
+	end
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 end
