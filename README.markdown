@@ -13,7 +13,7 @@
 + tvdb_party documentation: http://rubydoc.info/gems/tvdb_party/0.6.2/frames
 + delayed_job gem: https://github.com/collectiveidea/delayed_job
 
-#####Commit notes: (May 8 11ish p.m. - Mike Romain)
+#####Commit notes: (May 8 11ish p.m. - Mike Romain) - PUSHED TO HEROKU
 ######Search Functionality (for Rails Tutorial Project)
 + Changes:
 + Added new routes to routes.rb
