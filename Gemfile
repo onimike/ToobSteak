@@ -7,7 +7,7 @@ gem 'delayed_job'
 gem 'delayed_job_active_record'
 gem 'will_paginate', '3.0.pre2'
 
-gem :production do
+group :production do
 	gem 'pg'
 end
 
